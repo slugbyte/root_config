@@ -186,31 +186,6 @@
         <monitor>2</monitor>
       </action>
     </keybind>
-    <keybind key="W-space">
-      <action name="Execute">
-        <execute>rofi -show run</execute>
-      </action>
-    </keybind>
-    <keybind key="A-0x22">
-      <action name="Execute">
-        <execute>amixer set Master 10%-</execute>
-      </action>
-    </keybind>
-    <keybind key="A-0x23">
-      <action name="Execute">
-        <execute>amixer set Master 10%+</execute>
-      </action>
-    </keybind>
-    <keybind key="W-A-0x22">
-      <action name="Execute">
-        <execute>amixer set Master 5%-</execute>
-      </action>
-    </keybind>
-    <keybind key="W-A-0x23">
-      <action name="Execute">
-        <execute>amixer set Master 5%+</execute>
-      </action>
-    </keybind>
     <keybind key="W-A-u">
       <action name="ToggleFullscreen"/>
     </keybind>
