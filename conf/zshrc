@@ -32,7 +32,9 @@ alias tree='exa --tree'
 alias md='mkdir -p'
 alias S="nvim +S"
 alias F="nvim +F"
+
 alias a="git add"
+alias b="git branch -v"
 alias A="git add ."
 alias s="git status"
 alias c="git commit"
