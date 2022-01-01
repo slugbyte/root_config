@@ -5,6 +5,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 syntax enable              "  turn on syntax highlighting
@@ -32,4 +33,4 @@ set wildmenu               "  enable tab completion in the command bar
 set timeout
 
 command! F Files
-command! A Ag
+command! S Rg

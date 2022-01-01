@@ -1,22 +1,44 @@
 PROMPT='%d'
 PROMPT+=$'\n'"# "
 
+export SHELL=/bin/zsh
 export EDITOR=$(which nvim)
 export PAGER=$(which less)
 export MOLD_ROOT=$HOME/root_config
 
+export XDG_DESKTOP_DIR="$HOME/Desktop"
+export XDG_DOWNLOAD_DIR="$HOME/Downloads"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+
+mkdir -p $XDG_DESKTOP_DIR
+mkdir -p $XDG_DOWNLOAD_DIR
+mkdir -p $XDG_CONFIG_HOME
+mkdir -p $XDG_CACHE_HOME
+mkdir -p $XDG_DATA_HOME
+mkdir -p $XDG_STATE_HOME
+
+alias .="source"
 alias e='nvim'
 alias n='cd'
-alias r='source ~/.zshrc'
+alias R='source ~/.zshrc'
 alias ls='exa'
 alias ll='ls -lah'
 alias la='ls -la'
 alias o='lf'
 alias tree='exa --tree'
 alias md='mkdir -p'
-alias F="e -c ':Files'"
-alias .="source"
-alias R="source ~/.zshrc"
+alias S="nvim +S"
+alias F="nvim +F"
+alias a="git add"
+alias A="git add ."
+alias s="git status"
+alias c="git commit"
+alias p="git push origin"
+alias r="git remote -v"
+alias ..="cd .."
 
 alias xs="sudo xbps-query -Rs"
 alias xq="sudo xbps-query"
@@ -74,8 +96,11 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
 
-
 # [Shift - Tab] move through the completion menu backwards :)
 if [[ "${terminfo[kcbt]}" != "" ]]; then
 	bindkey "${terminfo[kcbt]}" reverse-menu-complete   # [Shift-Tab] - move through the completion menu backwards
+fi
+
+if [[ -d $HOME/.cargo ]];then 
+  source $HOME/.cargo/env
 fi
