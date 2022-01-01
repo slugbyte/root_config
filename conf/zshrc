@@ -3,6 +3,7 @@ PROMPT+=$'\n'"# "
 
 export EDITOR=$(which nvim)
 export PAGER=$(which less)
+export MOLD_ROOT=$HOME/root_config
 
 alias e='nvim'
 alias n='cd'
@@ -14,13 +15,17 @@ alias o='lf'
 alias tree='exa --tree'
 alias md='mkdir -p'
 alias F="e -c ':Files'"
+alias .="source"
+alias R="source ~/.zshrc"
 
 alias xs="sudo xbps-query -Rs"
+alias xq="sudo xbps-query"
 alias xi="sudo xbps-install -y"
 alias xr="sudo xbps-remove -R"
 
 xu() {
   sudo xbps-install -Syu
+  sudo xbps-reconfigure -fa
   sudo update-grub
 }
 
@@ -74,6 +79,3 @@ bindkey '\C-x\C-e' edit-command-line
 if [[ "${terminfo[kcbt]}" != "" ]]; then
 	bindkey "${terminfo[kcbt]}" reverse-menu-complete   # [Shift-Tab] - move through the completion menu backwards
 fi
-
-
-

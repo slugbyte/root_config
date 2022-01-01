@@ -3,7 +3,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'slugbyte/unruley-worker', {'branch': 'stage-3'}
 Plug 'itchyny/lightline.vim'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
