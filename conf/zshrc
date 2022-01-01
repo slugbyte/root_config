@@ -41,6 +41,7 @@ alias c="git commit"
 alias p="git push origin"
 alias r="git remote -v"
 alias ..="cd .."
+alias copy="xclip -selection c"
 
 alias xs="sudo xbps-query -Rs"
 alias xq="sudo xbps-query"
