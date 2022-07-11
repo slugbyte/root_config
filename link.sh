@@ -11,3 +11,5 @@ ln -sf $MOLD_ROOT/conf/.gitconfig ~/.gitconfig
 ln -sf $MOLD_ROOT/conf/zshrc ~/.zshrc
 
 ln -sf $MOLD_ROOT/conf/tmux.conf ~/.tmux.conf
+
+ln -sf $MOLD_ROOT/conf/xinitrc ~/.xinitrc
